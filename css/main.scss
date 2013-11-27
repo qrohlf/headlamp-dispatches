@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@import "normalize";
+@import "proxima-nova";
+
+// Color Scheme 'vintage greeting card'
+// $accent-dark-1: #5C4B51;
+// $accent-light-1: #8CBEB2;
+// $accent-light-2: #F2EBBF;
+// $accent-light-3: #F3B562;
+// $accent-light-4: #F06060;
+
+// Color Scheme 'tasty'
+$accent-1: #F34A53;
+$accent-2: #FAE3B4;
+$accent-3: #AAC789;
+$accent-4: #437356;
+$accent-5: #1E4147;
+
+.colorscheme {
+    div {
+        height: 100px;
+        width: 50px;
+        float: left;
+    }
+    :nth-child(1) {
+        background-color: $accent-1;
+    }
+    :nth-child(2) {
+        background-color: $accent-2;
+    }
+    :nth-child(3) {
+        background-color: $accent-3;
+    }
+    :nth-child(4) {
+        background-color: $accent-4;
+    }
+    :nth-child(5) {
+        background-color: $accent-5;
+    }
+}
+
+// Color Scheme 'ok hipster haven'
+// $accent-1: #42282F;
+
+$black: #000;
+$white: #FFF;
+
+/* 1rem == 16px */
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #FDFDFD;
+    //font-family: 'Volkorn', serif;
+    font-family: 'Cabin', sans-serif;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    background-color: $black;
+    img {
+        width: 100%;
+        opacity: .5;
+    }
+    .title {
+        position: absolute;
+        bottom: calc(50% - 5rem);
+        color: $white;
+        width: 100%;
+        text-align: center;
+        display: block;
+        h1 {
+            display: inline-block;
+            border-top: 2px solid $white;
+            border-bottom: 2px solid $white;
+            padding: 1rem 0;
+            clear: both;
+            margin: 0;
+        }
+        h2 {
+            margin: 1rem 0;
+            display: block;
+            text-transform: lowercase;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 2rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+a, a:visited {
+    color: $accent-1;
+}
+
+.date {
+    display: block;
+    float: left;
+    margin: 0 1rem 1rem 0;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+    color: $white;
+    span {
+        display: block;
+    }
+    .day {
+        font-size: 1.5rem;
+    }
+    background-color: $accent-3;
+}
+
+.post-index {
+    article {
+
+    }
+}
+
+footer {
+    display: block;
+    clear: both;
+}

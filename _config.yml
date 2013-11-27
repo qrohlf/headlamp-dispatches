@@ -1,0 +1,9 @@
+name: The Headlamp Dispatches
+description: Adventure and exploration in the Pacific Northwest
+url: http://headlamp-dispatches.com
+markdown: rdiscount
+pygments: true
+permalink: /posts/:title
+exclude: [main.scss, README.md, Gemfile, Gemfile.lock]
+rdiscount:
+  extensions: [smart]

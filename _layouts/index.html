@@ -1,0 +1,11 @@
+{% include header.html %}
+    <header>
+        <img class="header-image" src="/images/site/headers/IMG_1313.jpg" alt="header image"/>
+        <div class="title">
+            <h1>{{site.name}}</h1>
+            <h2>{{site.description}}</h2>
+        </div>
+    </header>
+    <div class="container">
+{{ content }}
+{% include footer.html %}
