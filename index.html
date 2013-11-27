@@ -1,12 +1,17 @@
 ---
-layout: index
+title: The Headlamp Dispatches
+summary: Adventure and exploration in the Pacific Northwest
+layout: page
+image: IMG_1313.jpg
 ---
 <section class="post-index">
 {% for post in site.posts %}
     <article>
+        <a href="{{post.url}}"><img src="/images/thumbnails/{{post.image}}" alt="post thumbnail"/></a>
         <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
-        {% include date.html %}
-        <p>{{ post.summary }}</p>
+        <div>
+            <p class="date">{{ post.date | date: "%d %h %Y" }}</p>
+        </div>
     </article>
 {% endfor %}
 </section>

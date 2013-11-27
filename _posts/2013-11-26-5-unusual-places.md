@@ -1,11 +1,9 @@
 ---
 title: The Raddest Places You've Never Heard Of
-summary: 5 interesting, unknown, and unusual places to go adventuring
+tagline: 5 interesting, unknown, and unusual places to go adventuring
 layout: post
+image: IMG_0384.jpg
 ---
-
-*This post marks the beginning of my new project, [The Headlamp Dispatches](http://headlamp-dispatches.com). You should really go read it there.*
-
 The Northwest is full of incredible places, but some definitely get more glory and attention than others. Last summer, I headed out to go hike up Oneonta Gorge and was a little bit taken aback by how many other hikers were marching up the river and clambering over the log jams beside me. It was great to see more and more people getting outside and exploring, but I also found myself going through all my favorite lesser-known getaways in my head, thinking about those spots where you can feel like you're discovering something.
 
 It's a little bit complicated to share places that are off the beaten track and recommend that people go there. Part of the draw of these secret spots is that they typically see few visitors - I've spent entire days on some of these trails without seeing another human being. Experiences like that can really reshape your perception of the outdoors, and so I write this in the hopes that others will be inspired to explore. Here are a few of the places in the northwest that are perfect to visit when you want to have an adventure that's off the beaten track.

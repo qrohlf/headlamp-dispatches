@@ -1,25 +1,31 @@
 @charset "UTF-8";
 @import "normalize";
-@import "proxima-nova";
+@import "bourbon";
+//$visual-grid: true;
+$max-width: 1000px;
+@import "neat";
+
+$mobile: new-breakpoint(max-width 680px 6);
 
 // Color Scheme 'vintage greeting card'
-// $accent-dark-1: #5C4B51;
-// $accent-light-1: #8CBEB2;
-// $accent-light-2: #F2EBBF;
-// $accent-light-3: #F3B562;
-// $accent-light-4: #F06060;
+$accent-1: #5C4B51;
+$accent-2: #8CBEB2;
+$accent-3: #f8d794;
+$accent-4: #F3B562;
+$accent-5: #F06060;
 
 // Color Scheme 'tasty'
-$accent-1: #F34A53;
-$accent-2: #FAE3B4;
-$accent-3: #AAC789;
-$accent-4: #437356;
-$accent-5: #1E4147;
+// $accent-1: #F34A53;
+// $accent-2: #FAE3B4;
+// $accent-3: #AAC789;
+// $accent-4: #437356;
+// $accent-5: #1E4147;
 
 .colorscheme {
+    width: 100%;
     div {
-        height: 100px;
-        width: 50px;
+        height: 15px;
+        width: 20%;
         float: left;
     }
     :nth-child(1) {
@@ -39,11 +45,9 @@ $accent-5: #1E4147;
     }
 }
 
-// Color Scheme 'ok hipster haven'
-// $accent-1: #42282F;
-
 $black: #000;
 $white: #FFF;
+$gray: #c3c3c3;
 
 /* 1rem == 16px */
 html {
@@ -54,6 +58,7 @@ body {
     background-color: #FDFDFD;
     //font-family: 'Volkorn', serif;
     font-family: 'Cabin', sans-serif;
+    font-size: 1.15rem;
 }
 
 header {
@@ -64,7 +69,8 @@ header {
     background-color: $black;
     img {
         width: 100%;
-        opacity: .5;
+        &.page-image {opacity: .5;}
+        display: block;
     }
     .title {
         position: absolute;
@@ -91,14 +97,21 @@ header {
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
+    @include outer-container;
+    margin: 0 auto 3rem auto;
+    //padding: 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Cabin', sans-serif;
     font-weight: normal;
+    a, a:visited {
+        text-decoration: none;
+        color: $black;
+    }
+    a:hover {
+        color: $accent-5;
+    }
 }
 
 h1 {
@@ -108,38 +121,85 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
 }
 
 a, a:visited {
-    color: $accent-1;
+    color: $accent-5;
+}
+
+p {
+    margin: 1rem 0;
+    line-height: 1.5em;
+}
+
+::selection {
+    background-color: $accent-5;
+    color: $white;
 }
 
 .date {
+    margin-top: 0;
     display: block;
-    float: left;
-    margin: 0 1rem 1rem 0;
-    border-radius: 5px;
-    padding: 5px;
-    font-family: 'Cabin', sans-serif;
     text-align: center;
-    color: $white;
-    span {
-        display: block;
-    }
-    .day {
-        font-size: 1.5rem;
-    }
-    background-color: $accent-3;
+    color: $accent-2;
+    font-size: 1rem;
 }
 
 .post-index {
     article {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        display: block;
+        @include span-columns(6);
+        @include omega(2n);
+        img {
+            @include span-columns(2 of 6);
+            border-radius: 300px;
+            border: 5px solid $gray;
+            &:hover {
+                border-color: $accent-4;
+            }
+        };
+        h2 {
+            @include span-columns(4 of 6);
+            padding-left: 1rem;
+        };
+        div {@include span-columns(6 of 6)};
 
+        @include media($mobile) { // As defined in _grid-settings.scss
+            @include span-columns(6);
+        }
+    }
+}
+
+.page-content {
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.post-title {
+    h2 {
+        font-style: italic;
+        color: $accent-4;
+        padding: 1rem 0;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        margin-bottom: 3rem;
+        text-align: center;
     }
 }
 
 footer {
     display: block;
     clear: both;
+    text-align: center;
+    background-color: $accent-2;
+    color: $white;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
 }
