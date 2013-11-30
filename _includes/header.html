@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% if page.title %}{{ page.title }} | {{ site.name }}
-        {% else %}{{ site.name }}{% endif %}
+        {% if page.title == site.name %}{{site.name}}
+        {% else %}{{page.title}} - {{site.name}}{% endif %}
     </title>
     <meta name="viewport" content=" initial-scale=1">
     {% if page.description %}<meta name="description" content="{{ page.description }}">

@@ -5,6 +5,7 @@
 $max-width: 1000px;
 @import "neat";
 
+$tablet: new-breakpoint(max-width 768px 12);
 $mobile: new-breakpoint(max-width 680px 6);
 
 // Color Scheme 'vintage greeting card'
@@ -13,6 +14,10 @@ $accent-2: #8CBEB2;
 $accent-3: #f8d794;
 $accent-4: #F3B562;
 $accent-5: #F06060;
+$text-dark: #232B2E;
+$black: #000;
+$white: #FFF;
+$gray: #c3c3c3;
 
 // Color Scheme 'tasty'
 // $accent-1: #F34A53;
@@ -23,6 +28,8 @@ $accent-5: #F06060;
 
 .colorscheme {
     width: 100%;
+    background-color: $accent-5; //fix for ipad rendering
+    height: 15px;
     div {
         height: 15px;
         width: 20%;
@@ -45,9 +52,7 @@ $accent-5: #F06060;
     }
 }
 
-$black: #000;
-$white: #FFF;
-$gray: #c3c3c3;
+
 
 /* 1rem == 16px */
 html {
@@ -59,6 +64,9 @@ body {
     //font-family: 'Volkorn', serif;
     font-family: 'Cabin', sans-serif;
     font-size: 1.15rem;
+    color: $text-dark;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -74,11 +82,23 @@ header {
     }
     .title {
         position: absolute;
-        bottom: calc(50% - 5rem);
+        top: 0;
+        bottom: 0; //height of the color swatches
         color: $white;
         width: 100%;
         text-align: center;
-        display: block;
+        font-size: 0;
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em; /* Adjusts for spacing */
+        }
+        .title-contents {
+            display: inline-block;
+            vertical-align: middle;
+        }
         h1 {
             display: inline-block;
             border-top: 2px solid $white;
@@ -86,12 +106,21 @@ header {
             padding: 1rem 0;
             clear: both;
             margin: 0;
+            color: $white;
+            font-size: 5rem;
+            @include media($tablet) { // As defined in _grid-settings.scss
+                font-size: 4rem;
+            }
+            @include media($mobile) {
+                font-size: 3rem;
+            }
         }
         h2 {
             margin: 1rem 0;
             display: block;
             text-transform: lowercase;
             font-size: 1.5rem;
+            color: $white;
         }
     }
 }
@@ -105,9 +134,10 @@ header {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Cabin', sans-serif;
     font-weight: normal;
+    color: $text-dark;
     a, a:visited {
         text-decoration: none;
-        color: $black;
+        color: $text-dark;
     }
     a:hover {
         color: $accent-5;
@@ -121,7 +151,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin: 0 0 1rem 0;
+    margin: 0;
 }
 
 a, a:visited {
@@ -140,44 +170,59 @@ p {
 
 .date {
     margin-top: 0;
-    display: block;
-    text-align: center;
     color: $accent-2;
     font-size: 1rem;
 }
 
-.post-index {
-    article {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        display: block;
-        @include span-columns(6);
-        @include omega(2n);
-        img {
-            @include span-columns(2 of 6);
-            border-radius: 300px;
-            border: 5px solid $accent-3;
-            &:hover {
-                border-color: $accent-4;
-            }
-        };
-        h2 {
-            @include span-columns(4 of 6);
-            padding-left: 1rem;
-        };
-        div {@include span-columns(6 of 6)};
+.post-index > a {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    display: block;
+    @include span-columns(6);
+    @include omega(2n);
+    img {
+        @include span-columns(2 of 6);
+        border-radius: 300px;
+        border: 5px solid $gray;
+        
+    };
+    div {
+        text-align: left;
+        @include span-columns(4 of 6);
+        padding-left: 1rem;
+    };
 
-        @include media($mobile) { // As defined in _grid-settings.scss
-            @include span-columns(6);
-        }
+    @include media($mobile) { // As defined in _grid-settings.scss
+        @include span-columns(6);
     }
+    &:hover {
+        img {border-color: $accent-4;}
+        h2 {color: $accent-5;}
+    }
+}
+
+.post {
+    padding: 2rem;
 }
 
 .page-content {
     h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
+    }
+
+    img {
+        width: 100%;
+        padding: 0;
+        margin: 1rem auto;
+        display: block;
+    }
+    .caption {
+        display: block;
+        margin: -.5rem auto 1rem auto;
+        text-align: center;
+        font-style: italic;
     }
 }
 
@@ -197,9 +242,9 @@ footer {
     display: block;
     clear: both;
     text-align: center;
-    background-color: $accent-2;
+    background-color: $accent-4;
     color: $white;
     width: 100%;
     margin: 0;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
 }
