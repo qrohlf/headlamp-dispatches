@@ -242,7 +242,7 @@ footer {
     display: block;
     clear: both;
     text-align: center;
-    background-color: $accent-1;
+    background-color: lighten($accent-1, 40%);
     color: $white;
     width: 100%;
     margin: 0;

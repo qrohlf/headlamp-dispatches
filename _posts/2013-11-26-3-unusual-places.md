@@ -15,6 +15,9 @@ What sets this area apart is that it has waterfalls and scenery to rival popular
 
 The [USFS](http://www.fs.usda.gov/recarea/giffordpinchot/recarea/?recid=31636) and [Portland Hikers](http://www.portlandhikersfieldguide.org/wiki/Siouxon_Creek_Hike) have driving directions and trail information.
 
+<img src="/images/posts/IMG_0304.jpg" alt="Wildcat Falls, Siouxon Creek" />
+*Wildcat Falls on the Siouxon Creek Trail*
+
 #The Benson Plateau
 The Eagle Creek trail is one of the most scenic - and popular - trails in the Columbia River Gorge. However, few people know about the Benson-Eagle Cutoff, a barely-marked trail that branches off the Eagle Creek trail in between Wy'East and Blue Grouse Camp which climbs two thousand feet up onto the Benson Plateau. On a busy weekend, it's always satisfying to bump shoulders with tour groups, field trips, and dozens of other hikers for the first few miles of the Eagle Creek trail, then see the crowds disappear as soon as you start making your way up the Benson-Eagle Cutoff. 
 
@@ -24,7 +27,13 @@ My suggestion is to cross off whatever you have planned for next weekend, grab a
 
 The Eagle Creek trailhead is located off of exit 41 of I-84. Green Trails #429 is the best map for this hike, as it includes the Benson-Eagle cutoff.
 
+<img src="/images/posts/IMG_0083.jpg" alt="Vision Quest Site, Ruckel Creek Trail" />
+*Native American vision quest site, Ruckel Creek Trail*
+
 #Cape Disappointment Coastal Forest Trail
 I have never once run into another group of people on this trail, and I've been hiking it with my family ever since I could walk. Even though it's a short hike, expect to see gigantic old-growth trees, wildlife, and ocean views. This is one of the few hikes that I enjoy just as much in the rain as in the sun - mist and raindrops just add to the experience. If you do this one, make sure to go all the way out to the rocky point at the tip of the loop - you'll be rewarded with tidepools, a great view of the ocean, and a nice spot to stop and have lunch. 
 
-To get there, drive to Cape Disappointment State Park on the Long Beach Peninsula in Washington. The trailhead for the Coastal Forest Trail is 
+To get there, drive to Cape Disappointment State Park on the Long Beach Peninsula in Washington. The trailhead for the Coastal Forest Trail is at the corner of the parking lot across from the State Park Store.
+
+<img src="/images/posts/coasthike.jpg" alt="the Washington Coast" />
+*Hiking on the Washington Coast*
